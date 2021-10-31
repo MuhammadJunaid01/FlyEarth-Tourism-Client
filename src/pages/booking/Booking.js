@@ -9,7 +9,7 @@ const Booking = () => {
   const [booking, setBooking] = useState({});
   const [isLoading, setIsLoading] = useState();
   useEffect(() => {
-    fetch(`https://fathomless-beyond-11252.herokuapp.combooking/${id}`)
+    fetch(`https://fathomless-beyond-11252.herokuapp.com/booking/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setBooking(data);
@@ -24,7 +24,7 @@ const Booking = () => {
   }, []);
   const handleAddTocart = (cartData) => {
     axios
-      .post("https://fathomless-beyond-11252.herokuapp.comorders", cartData)
+      .post("https://fathomless-beyond-11252.herokuapp.com/orders", cartData)
       .then((res) => {
         console.log(res);
       });

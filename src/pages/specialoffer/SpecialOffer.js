@@ -9,7 +9,7 @@ const SpecialOffer = () => {
   const [offers, setOffers] = useState();
   const [isLoading, setIsLoading] = useState();
   useEffect(() => {
-    fetch("https://fathomless-beyond-11252.herokuapp.comspecialOffer")
+    fetch("https://fathomless-beyond-11252.herokuapp.com/specialOffer")
       .then((res) => res.json())
       .then((data) => {
         setOffers(data);
@@ -22,7 +22,7 @@ const SpecialOffer = () => {
     const data = offers[index];
     console.log("data", data);
     data.email = email;
-    fetch("https://fathomless-beyond-11252.herokuapp.comaddorder", {
+    fetch("https://fathomless-beyond-11252.herokuapp.com/addorder", {
       method: "post",
       headers: {
         "content-type": "application/json",

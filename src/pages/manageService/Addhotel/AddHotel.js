@@ -8,7 +8,7 @@ const AddHotel = () => {
   const { user } = UseAuth();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch("https://fathomless-beyond-11252.herokuapp.comaddhotel", {
+    fetch("https://fathomless-beyond-11252.herokuapp.com/addhotel", {
       method: "POST",
       headers: {
         "content-type": "application/json",

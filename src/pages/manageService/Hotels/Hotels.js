@@ -4,7 +4,7 @@ import "./Hotel.css";
 const Hotels = () => {
   const [hotels, setHotels] = useState();
   useEffect(() => {
-    fetch("/addhotel")
+    fetch("https://fathomless-beyond-11252.herokuapp.com/addhotel")
       .then((res) => res.json())
       .then((data) => setHotels(data));
   }, []);

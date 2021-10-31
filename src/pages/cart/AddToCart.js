@@ -17,7 +17,7 @@ const AddToCart = () => {
   const [myOrders, setMyOrders] = useState();
   const [confirmed, setConfirmed] = useState();
   useEffect(() => {
-    fetch(`https://fathomless-beyond-11252.herokuapp.commyorders/${email}`)
+    fetch(`https://fathomless-beyond-11252.herokuapp.com/myorders/${email}`)
       .then((res) => res.json())
       .then((data) => setMyOrders(data))
       .catch((err) => console.log(err));
@@ -27,7 +27,7 @@ const AddToCart = () => {
   // };
   const onSubmit = (data) => {
     console.log(data, confirmed);
-    fetch("https://fathomless-beyond-11252.herokuapp.comconfimorder", {
+    fetch("https://fathomless-beyond-11252.herokuapp.com/confimorder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(confirmed),
