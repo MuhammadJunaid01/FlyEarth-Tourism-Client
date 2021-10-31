@@ -1,0 +1,20 @@
+.bookinContainer {
+  padding: 60px;
+}
+.booking-image {
+  padding: 10px;
+  border-radius: 10px;
+}
+.Spinner {
+  text-align: center;
+}
+.addcart-btn {
+  width: 100%;
+  border: none;
+  background-color: tomato;
+  padding: 3px 0px;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  outline: orange;
+}

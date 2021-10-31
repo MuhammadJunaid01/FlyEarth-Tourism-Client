@@ -1,0 +1,33 @@
+.caruser-image {
+  height: 530px;
+}
+
+.carusel-info {
+  margin-bottom: 30px;
+}
+.carusel-info h3 {
+  font-size: 70px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.carusel-info p {
+  font-size: 33px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.carusel-info Button {
+  padding: 10px 30px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .carusel-info h3 {
+    font-size: 30px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .carusel-info p {
+    font-size: 20px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+}

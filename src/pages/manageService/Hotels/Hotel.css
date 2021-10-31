@@ -1,0 +1,24 @@
+.hotels-container {
+  padding: 50px;
+  background-color: rgba(220, 220, 220, 0.623);
+}
+.hotels-info {
+  text-align: center;
+}
+.hotel-img {
+  height: 220px;
+  padding: 8px;
+}
+.hotel-cart {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+}
+.hotel-cart:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .hotels-container {
+    padding: 0px;
+  }
+}

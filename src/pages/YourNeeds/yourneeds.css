@@ -1,0 +1,33 @@
+.yourNeeds {
+  background-color: gainsboro;
+  color: black;
+  padding: 50px 10px;
+}
+.yourNeeds .info {
+  text-align: center;
+}
+.yourNeeds .select-dest {
+  text-align: center;
+  margin-top: 20px;
+}
+.select-dest input,
+select {
+  margin-right: 10px;
+  padding: 10px;
+  /* background-color: #353535; */
+  border: 2px solid white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 50px;
+  border-radius: 4px;
+  color: gray;
+  outline: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .select-dest input,
+  select {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+  }
+}

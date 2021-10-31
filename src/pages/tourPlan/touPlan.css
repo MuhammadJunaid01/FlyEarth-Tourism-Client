@@ -1,0 +1,19 @@
+.tourPlan-container {
+  padding: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.tour-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.tour-info h4 {
+  color: #ff6d22;
+}
+.loader {
+  text-align: center;
+}
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .tourPlan-container {
+    padding: 0px;
+  }
+}

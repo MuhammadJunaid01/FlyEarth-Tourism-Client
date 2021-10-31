@@ -1,0 +1,59 @@
+.cartcontainer {
+  background-color: gainsboro;
+  padding: 50px;
+}
+.orders-reapet {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.orders-image {
+  width: 325px;
+  height: 300px;
+  border-radius: 8px;
+}
+.group-btn {
+  display: flex;
+  justify-content: space-around;
+}
+.orderSubmit {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  /* border: none; */
+  outline: none;
+  background-color: gainsboro;
+  text-align: center;
+}
+.confirmed-cont {
+  background-color: gainsboro;
+  /* padding: 20px; */
+  margin-bottom: 10px;
+}
+.confirmed-img {
+  width: 280px;
+  height: 251px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .cartcontainer {
+    background-color: gainsboro;
+    padding: 0px;
+  }
+  .orders-image {
+    width: 250px;
+    margin-right: 9px;
+  }
+  .confirmed-img {
+    width: 280px;
+    height: 251px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-left: 0px;
+  }
+}

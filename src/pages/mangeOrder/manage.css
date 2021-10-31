@@ -1,0 +1,25 @@
+.manageContainer {
+  padding: 50px;
+}
+.manageContainer h1 {
+  text-align: center;
+}
+.mange-img {
+  height: 270px;
+  width: 358px;
+  padding: 8px;
+}
+.manage-cont {
+  background-color: gainsboro;
+  padding-bottom: 20px;
+  /* padding: 30px; */
+  margin-top: 20px;
+}
+.manage-info {
+  display: flex;
+  justify-content: space-around;
+}
+.delete-btn {
+  width: 100px;
+  margin-left: 32px;
+}

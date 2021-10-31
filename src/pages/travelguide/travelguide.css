@@ -1,0 +1,32 @@
+.travelguidecontainer {
+  padding: 60px;
+}
+.travelinfocontainer {
+  padding: 20px;
+
+  border-radius: 10px;
+  text-align: center;
+}
+.travelinfocontainer:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.travelinfocontainer h5 {
+}
+.travelinfoicon {
+  margin-bottom: 30px;
+}
+
+.travelinfoicon i {
+  font-size: 40px;
+  background-color: #ff681a;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  /* transition: 4s ease-in-out; */
+}
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .travelguidecontainer {
+    padding: 0px;
+  }
+}

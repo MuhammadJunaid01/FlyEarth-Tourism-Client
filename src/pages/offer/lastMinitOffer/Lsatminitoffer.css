@@ -1,0 +1,53 @@
+.mintoofer {
+  padding: 50px;
+  background-color: #fa915a;
+}
+
+.veiwMore-btn {
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  color: #fa915a;
+  font-size: 20px;
+  font-weight: 500;
+}
+.veiwMore-btn:hover {
+  background-color: #303030;
+  color: white;
+}
+.minitOffer-info h1 {
+  font-size: 50px;
+  color: white;
+}
+.minitOffer-info p {
+  color: white;
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .mintoofer {
+    padding: 0px;
+  }
+  .mintoofer {
+    padding-bottom: 19px;
+  }
+  .minitOffer-info h1 {
+    text-align: center;
+    /* display: inline-block; */
+    margin: 20px 0px;
+    font-size: 27px;
+  }
+  .minitoffer-banner {
+    text-align: center;
+  }
+  .minitoffer-banner img {
+    width: 200px;
+  }
+  .minitOffer-info p {
+    font-size: 16px;
+  }
+  .veiwMore-btn {
+    margin-left: 40px;
+  }
+}

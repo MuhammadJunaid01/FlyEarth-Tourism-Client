@@ -1,0 +1,49 @@
+.tour-card {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tour-images {
+  height: 250px;
+
+  transition: 3s ease-in-out;
+}
+.tour-images:hover {
+  transform: scale(1.1);
+}
+.tour-names {
+  /* top: 100px; */
+
+  /* color: gainsboro;
+  background-color: rgba(0, 0, 0, 0.445);
+  padding: 0px 6px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 30px;
+  /* font-weight: 600; */
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+}
+.tour-price {
+  /* color: gainsboro;
+  font-size: 30px;
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 2px 10px;
+  border-radius: 8px; */
+}
+.country-name {
+  /* color: gainsboro;
+
+  font-size: 30px;
+  /* font-weight: 600; */
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;  */
+}
+.count {
+  display: flex;
+  justify-content: space-between;
+}
+.veiwmore-btn {
+  width: 100%;
+  padding: none;
+  background-color: #ff681a;
+}

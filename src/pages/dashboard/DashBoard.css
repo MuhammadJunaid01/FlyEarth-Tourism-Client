@@ -1,0 +1,40 @@
+.dashBoardContainer {
+  width: 50%;
+  margin: 0 auto;
+  background-color: darkslategrey;
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+.addhotel {
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+.addhotelicon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.addhotel p {
+  font-size: 20px;
+}
+.myorder {
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.myordericon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.myorder p {
+  font-size: 20px;
+}

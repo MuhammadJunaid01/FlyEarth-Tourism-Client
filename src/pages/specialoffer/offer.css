@@ -1,0 +1,42 @@
+.specialoffer {
+  padding: 50px;
+}
+.special-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.special-container {
+  padding-bottom: 10px;
+  background-color: gainsboro;
+  border-radius: 10px;
+}
+.special-banner {
+  overflow: hidden;
+  padding: 10px;
+}
+.special-cardinfo {
+  padding: 10px;
+}
+.special {
+  height: 220px;
+  width: 355px;
+  transition: 3s ease-in-out;
+  border-radius: 8px;
+}
+.specialname {
+  color: black;
+  font-size: 25px;
+  font-weight: 800;
+}
+.special-banner:hover .special {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+.booknow {
+  width: 100%;
+}
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .specialoffer {
+    padding: 0px;
+  }
+}

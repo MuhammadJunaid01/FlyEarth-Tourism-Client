@@ -1,0 +1,106 @@
+.topMenu {
+  background-color: #2e2e2e;
+  color: white;
+}
+.topmenucontainer {
+  display: flex;
+  justify-content: space-between;
+}
+.contuct-topmenu {
+  display: flex;
+  padding: 7px 0px;
+}
+.addressCont {
+  margin-left: 20px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+}
+.social-link .social-icons {
+  margin-right: 20px;
+  margin-top: 8px;
+  color: white;
+}
+.social-icons:hover {
+  transform: scale(0.9);
+  color: #ff681a;
+}
+.topMenu i {
+  color: #ff681a;
+}
+.topMenu i:hover {
+  color: white;
+}
+.contuct-icon {
+  margin-right: 10px;
+}
+.user-login-top {
+  margin-right: 0px;
+}
+.user-login-top-link i {
+  color: white;
+}
+.user-login-top-link {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  border-left: 1px solid gray;
+  padding: 0px 10px;
+}
+.user-login-top-link:hover {
+  color: white;
+}
+.cart {
+  cursor: pointer;
+}
+.products-cont {
+  background-color: gainsboro;
+  padding-bottom: 20px;
+}
+.products-image {
+  height: 200px;
+  width: 165px;
+  border-radius: 9px;
+  padding: 10px;
+  text-align: center;
+}
+.products-cont h4 {
+  display: inline-block;
+  border: 2px solid gray;
+}
+.my-order {
+  display: flex;
+  justify-content: space-around;
+}
+.total-bookig {
+  border-top: 2px solid gray;
+}
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .topmenucontainer {
+    display: block;
+  }
+  .topMenu {
+    text-align: center;
+  }
+
+  .contuct-topmenu {
+    display: block;
+  }
+  .call-phone {
+    display: block;
+    width: 100%;
+  }
+  .social-link {
+    display: block;
+  }
+  .contuct-icon {
+    display: block;
+  }
+  .user-login-top-link {
+    border-left: none;
+    border-top: 1px solid gray;
+    display: inline-block;
+    margin-top: 6px;
+  }
+}
