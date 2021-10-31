@@ -4,14 +4,14 @@ import "./manage.css";
 const ManageOrder = () => {
   const [manage, setManage] = useState();
   useEffect(() => {
-    fetch("https://fathomless-beyond-11252.herokuapp.com/confimorder")
+    fetch("https://fathomless-beyond-11252.herokuapp.comconfimorder")
       .then((res) => res.json())
       .then((data) => setManage(data));
-  }, []);
+  }, [manage]);
   //   console.log("manage", manage);
   const handleDelete = (id) => {
     console.log("delete id", id);
-    fetch(`https://fathomless-beyond-11252.herokuapp.com/delete/${id}`, {
+    fetch(`https://fathomless-beyond-11252.herokuapp.comdelete/${id}`, {
       method: "DELETE",
     }).then((res) => {
       console.log("dele", res);

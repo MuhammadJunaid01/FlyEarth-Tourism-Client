@@ -5,9 +5,9 @@ import "./DashBoard.css";
 const DashBoard = () => {
   return (
     <div>
-      <h1>hello dash board</h1>
       <Container>
         <div className="dashBoardContainer">
+          <h1>Admin Dash Board:</h1>
           <Link className="text-white" to="/addhotel">
             <div className="addhotel">
               <span className="addhotelicon">

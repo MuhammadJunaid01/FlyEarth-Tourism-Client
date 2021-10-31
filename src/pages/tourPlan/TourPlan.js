@@ -7,7 +7,7 @@ const TourPlan = () => {
   const [tourPlan, setTourPlan] = useState([]);
   const [isloading, setIsloading] = useState();
   useEffect(() => {
-    fetch("https://fathomless-beyond-11252.herokuapp.com/tourpackeges")
+    fetch("https://fathomless-beyond-11252.herokuapp.comtourpackeges")
       .then((res) => res.json())
       .then((data) => {
         setTourPlan(data);

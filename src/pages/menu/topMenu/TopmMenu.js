@@ -11,7 +11,7 @@ const TopmMenu = () => {
   const [orderDetail, setOrderDetail] = useState();
   const [orderProducts, setOrderProducts] = useState();
   useEffect(() => {
-    fetch("https://fathomless-beyond-11252.herokuapp.com/ordersumary")
+    fetch("https://fathomless-beyond-11252.herokuapp.comordersumary")
       .then((res) => res.json())
       .then((data) => {
         setOrderDetail(data);
@@ -19,7 +19,7 @@ const TopmMenu = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://fathomless-beyond-11252.herokuapp.com/confimorder")
+    fetch("https://fathomless-beyond-11252.herokuapp.comconfimorder")
       .then((res) => res.json())
       .then((data) => {
         setOrderProducts(data);
