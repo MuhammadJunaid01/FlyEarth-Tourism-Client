@@ -3,7 +3,9 @@ import axios from "axios";
 import { Card, Col, Container, Form, Row, Button } from "react-bootstrap";
 import { useParams } from "react-router";
 import "./booking.css";
+import UseAuth from "./../../hooks/useAuth/UseAuth";
 const Booking = () => {
+  const { user } = UseAuth();
   const { id } = useParams();
   console.log(id);
   const [booking, setBooking] = useState({});
@@ -31,7 +33,9 @@ const Booking = () => {
 
     console.log("cart data", cartData);
   };
-
+  const handlereload = (e) => {
+    e.preventDefault();
+  };
   isLoading ? console.log("booking", booking) : console.log("hello is loading");
   return (
     <div className="bookinContainer">
@@ -60,18 +64,22 @@ const Booking = () => {
             </Card>
           </Col>
           <Col lg={4} md={12} sm={12}>
-            <Form>
+            <Form onSubmit={handlereload}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control type="email" value={user?.email} />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
                 </Form.Text>
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Label>Address</Form.Label>
+                <Form.Control type="text" placeholder="Address" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Phone Number:</Form.Label>
+                <Form.Control type="text" placeholder="Phone Number:" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Check me out" />
