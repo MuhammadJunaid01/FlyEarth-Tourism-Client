@@ -1,12 +1,15 @@
 .logingoogle {
   padding: 40px;
   text-align: center;
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
+}
+.logingoogle img {
+  border-radius: 10px;
 }
 .loginContainer {
-  background-color: white;
+  background-color: gainsboro;
   padding: 30px;
-  width: 50%;
+  height: 230px;
   border-radius: 10px;
   margin: 0 auto;
 }

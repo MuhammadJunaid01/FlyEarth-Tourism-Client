@@ -2,6 +2,8 @@ import React from "react";
 import "./login.css";
 import UsefireBase from "./../../hooks/useFirebase/UsefireBase";
 import { useHistory, useLocation } from "react-router";
+import { Container, Row, Col } from "react-bootstrap";
+import loginimage from "../../images/login.jpg";
 const Login = () => {
   const location = useLocation();
   const history = useHistory();
@@ -37,17 +39,28 @@ const Login = () => {
   };
   console.log("login user:", user);
   return (
-    <div className="logingoogle">
-      <div className="loginContainer">
-        <div className="login-info">
-          <h3>Login With Google</h3>
-        </div>
-        <button onClick={SignWithGoole} className="google">
-          <i className="fab fa-google"></i> Login With Google
-        </button>
-        <p>{error}</p>
+    <Container>
+      <div className="logingoogle">
+        <Row>
+          <Col lg={6} sm={12} md={12}>
+            <img className="img-fluid" src={loginimage} alt="" />
+          </Col>
+          <Col lg={6} sm={12} md={12}>
+            <div>
+              <div className="loginContainer">
+                <div className="login-info">
+                  <h3>Login With Google</h3>
+                </div>
+                <button onClick={SignWithGoole} className="google">
+                  <i className="fab fa-google"></i> Login With Google
+                </button>
+                <p>{error}</p>
+              </div>
+            </div>
+          </Col>
+        </Row>
       </div>
-    </div>
+    </Container>
   );
 };
 

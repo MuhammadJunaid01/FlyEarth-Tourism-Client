@@ -11,7 +11,7 @@ const TopmMenu = () => {
   const [orderDetail, setOrderDetail] = useState();
   const [orderProducts, setOrderProducts] = useState();
   useEffect(() => {
-    fetch("/ordersumary")
+    fetch("https://fathomless-beyond-11252.herokuapp.com/ordersumary")
       .then((res) => res.json())
       .then((data) => {
         setOrderDetail(data);
@@ -23,7 +23,6 @@ const TopmMenu = () => {
       .then((res) => res.json())
       .then((data) => {
         setOrderProducts(data);
-        console.log("order data load", data.confirmed);
       })
       .catch((err) => {
         console.log(err);
@@ -32,9 +31,7 @@ const TopmMenu = () => {
   const myOrder = orderProducts?.length;
   const userOrder = orderDetail?.length;
   const totalOrder = myOrder + userOrder;
-  console.log("user order:", userOrder);
-  console.log("myorder:", myOrder);
-  console.log("confirmorder", orderProducts);
+
   return (
     <div className="topMenu">
       <Container>
@@ -110,7 +107,7 @@ const TopmMenu = () => {
                         src={product.image}
                         alt=""
                       />
-                      <h4>{product.name}</h4>
+                      <h6>{product.name}</h6>
                       <p>{product.country}</p>
                       <p>{product.address}</p>
                     </div>

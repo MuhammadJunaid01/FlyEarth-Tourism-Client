@@ -32,9 +32,6 @@ const NavigationBar = () => {
               <Link className="link" to="/blogs">
                 BLOG
               </Link>
-              <Link className="link" to="/mangeorder">
-                MANAGE ORDER
-              </Link>
 
               <Link className="link" to="/dashboard">
                 DASHBOARD

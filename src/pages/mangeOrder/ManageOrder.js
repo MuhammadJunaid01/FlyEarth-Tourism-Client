@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 import "./manage.css";
+import { Spinner, Button } from "react-bootstrap";
+import UseAuth from "./../../hooks/useAuth/UseAuth";
 const ManageOrder = () => {
+  const { user } = UseAuth();
+  console.log(user);
   const [manage, setManage] = useState();
   useEffect(() => {
     fetch("https://fathomless-beyond-11252.herokuapp.com/confimorder")
       .then((res) => res.json())
-      .then((data) => setManage(data));
-  }, [manage]);
-  //   console.log("manage", manage);
+      .then((data) => {
+        data.status = "Pending......";
+        setManage(data);
+      });
+  }, []);
+  console.log(manage);
   const handleDelete = (id) => {
     console.log("delete id", id);
     fetch(`https://fathomless-beyond-11252.herokuapp.com/delete/${id}`, {
@@ -19,30 +26,65 @@ const ManageOrder = () => {
   };
   return (
     <div className="manageContainer">
-      <h1>Manage Your Order</h1>
       <Container>
         <Row className="g-3">
-          {manage?.map((manage, index) => (
+          {manage?.map((manages, index) => (
             <Col key={index} lg={4} md={12} sm={12}>
               <div className="manage-cont">
                 <img
                   className="img-fluid mange-img"
-                  src={manage.image}
+                  src={manages.image}
                   alt=""
                 />
-                <div className="manage-info">
-                  <p>{manage.address}</p>
-                  <p>{manage.country}</p>
-                  <p>{manage.name}</p>
+                <div>
+                  <h1>
+                    Cost: <span className="text-danger">{manages.price}</span>{" "}
+                  </h1>
+                  <h2 className="text-info">{manages.name}</h2>
+                  <p>{manages.info}</p>
                 </div>
-                <button
-                  onClick={() => handleDelete(manage._id)}
-                  className="btn  btn-outline-danger delete-btn"
-                >
-                  Delete
-                </button>
               </div>
             </Col>
+          ))}
+          {manage?.map((tableListmange, index) => (
+            <div key={index}>
+              <Table striped bordered hover size="sm">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Delete</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>{user?.displayName}</td>
+                    <td>
+                      <button
+                        onClick={() => handleDelete(tableListmange._id)}
+                        className="btn  btn-outline-danger "
+                      >
+                        Delete
+                      </button>
+                    </td>
+                    <td>
+                      <Button variant="primary" disabled>
+                        <Spinner
+                          as="span"
+                          animation="grow"
+                          size="sm"
+                          role="status"
+                          aria-hidden="true"
+                        />
+                        {manage?.status}
+                      </Button>
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
           ))}
         </Row>
       </Container>

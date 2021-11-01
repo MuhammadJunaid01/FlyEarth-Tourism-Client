@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ManageOrder from "../mangeOrder/ManageOrder";
 import "./DashBoard.css";
 const DashBoard = () => {
   return (
@@ -24,6 +25,12 @@ const DashBoard = () => {
 
               <p>My Order</p>
             </div>
+          </Link>
+          <Link className="text-white manageorder-link" to="/mangeorder">
+            <p>
+              <i className="fas fa-tasks myordericon"></i>
+            </p>
+            <p>Manage All Orders</p>
           </Link>
           <div className="addSpecialOffer"></div>
         </div>
