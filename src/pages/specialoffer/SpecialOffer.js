@@ -20,8 +20,10 @@ const SpecialOffer = () => {
   }, []);
   const handleaddedcartspecialOffer = (index) => {
     const data = offers[index];
-    console.log("data", data);
+    // console.log("data", data._id);
     data.email = email;
+    delete data?._id;
+    console.log("sp offer data type", data?._id);
     fetch("https://fathomless-beyond-11252.herokuapp.com/addorder", {
       method: "post",
       headers: {
