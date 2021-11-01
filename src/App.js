@@ -40,10 +40,10 @@ function App() {
             <Route exact path="/destination">
               <DestinaTion></DestinaTion>
             </Route>
-            <PrivateRoute exact path="/blogs">
+            <PrivateRoute path="/blogs">
               <Blogs></Blogs>
             </PrivateRoute>
-            <Route exact path="/tours">
+            <Route path="/tours">
               <Tours></Tours>
             </Route>
             <Route exact path="/myorder">

@@ -3,8 +3,12 @@ import UsefireBase from "./../useFirebase/UsefireBase";
 
 export const AuthContext = createContext();
 const UseAuthProvider = ({ children }) => {
-  const Auth = UsefireBase();
-  return <AuthContext.Provider value={Auth}>{children}</AuthContext.Provider>;
+  const firebaseContext = UsefireBase();
+  return (
+    <AuthContext.Provider value={firebaseContext}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export default UseAuthProvider;

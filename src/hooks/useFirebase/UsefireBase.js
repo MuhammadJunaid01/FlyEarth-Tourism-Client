@@ -15,6 +15,7 @@ const UsefireBase = () => {
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   const LoginWithGoole = () => {
+    setIsLoading(true);
     return signInWithPopup(auth, provider);
   };
 
@@ -30,16 +31,20 @@ const UsefireBase = () => {
     return () => unsubscribe();
   }, []);
   const LogOut = () => {
-    const auth = getAuth();
+    // const auth = getAuth();
+
     signOut(auth)
       .then(() => {
         // Sign-out successful.
         alert("Sign-out successful.");
+        // setIsLoading(true);
       })
       .catch((error) => {
         console.log(error);
-      });
+      })
+      .finally(setIsLoading(false));
   };
+  console.log("use firebase is loading", isLoading);
   return {
     user,
     setUser,

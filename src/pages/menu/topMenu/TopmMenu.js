@@ -67,7 +67,7 @@ const TopmMenu = () => {
             </span>
 
             <div className="login-top">
-              {user.email ? (
+              {user?.email ? (
                 <Link
                   onClick={LogOut}
                   className="user-login-top-link"

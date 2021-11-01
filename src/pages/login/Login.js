@@ -23,7 +23,6 @@ const Login = () => {
         const LogedUser = result.user;
         setUser(LogedUser);
         history.push(redirect);
-        setIsLoading(true);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -37,7 +36,7 @@ const Login = () => {
         setIsLoading(false);
       });
   };
-  console.log("login user:", user);
+  // console.log("login user:", user);
   return (
     <Container>
       <div className="logingoogle">
@@ -51,7 +50,7 @@ const Login = () => {
                 <div className="login-info">
                   <h3>Login With Google</h3>
                 </div>
-                <button onClick={SignWithGoole} className="google">
+                <button className="google" onClick={SignWithGoole}>
                   <i className="fab fa-google"></i> Login With Google
                 </button>
                 <p>{error}</p>
